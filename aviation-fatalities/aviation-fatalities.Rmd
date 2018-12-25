@@ -1,0 +1,46 @@
+---
+title: "Reducing Commercial Aviation Fatalities with Machine Learning"
+output: html_notebook
+---
+
+
+In this notebook, we are going to create an algorithm which will detect troubling events from aircrew???s physiological data. This algorithm will learn from train dataset and then it will predict the placement for each player of the test dataset.
+
+The plan to do that is the following one :
+
+1. Exploration of data
+2. Cleaning data and Features engineering
+3. Testing of the model on train dataset
+4. Prediction on test data & submission on kaggle
+
+For more informations or for seeing data, please check the competition page : https://www.kaggle.com/c/reducing-commercial-aviation-fatalities
+
+### Imports
+
+```{r}
+library(data.table)
+```
+
+
+### Useful functions
+
+```{r}
+
+```
+
+### 1. Exploration of data
+
+```{r}
+path_train <- getwd()
+path_train = paste(path_train, 'datasets/train.csv', sep='/')
+train_raw <- fread(file=path_train, header=TRUE, sep=",")
+head(train_raw, 5)
+```
+```{r}
+
+```
+
+
+### 2. Cleaning data and Features engineering
+### 3. Testing of the model on train dataset
+### 4. Prediction on test data & submission on kaggle
