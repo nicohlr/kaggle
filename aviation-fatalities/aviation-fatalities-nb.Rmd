@@ -19,6 +19,8 @@ For more informations or for seeing data, please check the competition page : ht
 
 ```{r}
 library(data.table)
+library(ggplot2)
+library(tidyr)
 ```
 
 
@@ -30,6 +32,7 @@ library(data.table)
 
 ### 1. Exploration of data
 
+First, we can take a look on the first 5 lines of the train data.frame after importing it from csv file:
 ```{r}
 path_train <- getwd()
 path_train = paste(path_train, 'datasets/train.csv', sep='/')
@@ -37,7 +40,17 @@ train_raw <- fread(file=path_train, header=TRUE, sep=",")
 head(train_raw, 5)
 ```
 ```{r}
+sapply(train_raw, function(x) sum(is.na(x)))
+```
+Apparently, there are no missing values in this data.frame ! 
+Now, let's compute some basical statistics on this data.frame:
+```{r}
+summary(train_raw)
+```
+We will have to work on 'experiment' and 'event' columns to make it numerical. Other columns are numerical.
 
+```{r}
+ggplot(train
 ```
 
 
