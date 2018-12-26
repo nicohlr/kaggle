@@ -12,3 +12,4 @@ My account : https://www.kaggle.com/nhlr21
 - [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer): Learn computer vision fundamentals with the famous MNIST data
 - [PUBG Finish Placement Prediction](https://www.kaggle.com/c/pubg-finish-placement-prediction): Predict the battle royale finish of PUBG Players.
 - [New York City Taxi Trip Duration](https://www.kaggle.com/c/nyc-taxi-trip-duration): Predict the total ride duration of taxi trips in New York City.
+- [Reducing Commercial Aviation Fatalities](https://www.kaggle.com/c/reducing-commercial-aviation-fatalities): Detect troubling events from aircrew’s physiological data.
