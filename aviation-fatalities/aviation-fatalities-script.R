@@ -17,4 +17,6 @@ sapply(train_raw, function(x) sum(is.na(x)))
 # print some basical statistics on this data.frame
 summary(train_raw)
 
+# Plots
+boxplot(split(train_raw$r, train_raw$event), main='Event by respiration')
 
