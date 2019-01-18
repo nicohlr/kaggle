@@ -33,11 +33,12 @@ library(tidyr)
 ### 1. Exploration of data
 
 First, we can take a look on the first 5 lines of the train data.frame after importing it from csv file:
+
 ```{r}
 path_train <- getwd()
 path_train = paste(path_train, 'datasets/train.csv', sep='/')
 train_raw <- fread(file=path_train, header=TRUE, sep=",")
-head(train_raw, 5)
+head(train_raw)
 ```
 
 **Let's put here all informations about columns of this dataframe:**
@@ -69,17 +70,31 @@ Now, let's compute some basical statistics on this data.frame:
 ```{r}
 summary(train_raw)
 ```
-We will have to work on 'experiment' and 'event' columns to make it numerical. Other columns are numerical.
 
-Let's make some plot to try to see pattern in the data :
+We will have to work on 'experiment' and 'event' columns to make it numerical. Other columns are numerical.
+Event is the column containing the data that we will have to predict. Let's take a look on the values of this column to have a better understanding of the distribution of the results :
+
+```{r}
+table(unlist(train_raw$event))
+```
+
+We can see a huge majority of A and C results ... #TODO : ANALYSE THIS
+Now, lets convert this column into numerical data to make some plots on it. A will take the value 1, B will be 2 etc. 
+
+```{r}
+train_raw$event <- as.numeric(factor(train_raw$event, levels=unique(train_raw$event)))
+head(train_raw$event)
+```
+
+We're ready to make some plot to try to see pattern in the data :
 
 ```{r}
 boxplot(split(train_raw$r, train_raw$event), main='Event by respiration')
 ```
-It seem that B event is correlated with an higher respiration rate ... It's normal knowing that B event corresponds to SS (Startle/Surprise) and is induced by having the subjects watch movie clips with jump scares. We may help the algorithm to find this patter by creating a binary "high respiration column" which value is 1 for respirations over 750 and 0 for others values of respirations.
+It seem that B event (2) is correlated with an higher respiration rate ... It's normal knowing that B event (2) corresponds to SS (Startle/Surprise) and is induced by having the subjects watch movie clips with jump scares. We may help the algorithm to find this patter by creating a binary "high respiration column" which value is 1 for respirations over 750 and 0 for others values of respirations.
 
 ```{r}
-
+boxplot(split(train_raw$ecg, train_raw$event), main='Event by electrocardiogram')
 ```
 
 
