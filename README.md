@@ -10,4 +10,6 @@ My account : https://www.kaggle.com/nhlr21
 
 - [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic): Predict survival on the Titanic and get familiar with ML basics
 - [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer): Learn computer vision fundamentals with the famous MNIST data
-- [PUBG Finish Placement Prediction](https://www.kaggle.com/c/pubg-finish-placement-prediction): Predict the battle royale finish of PUBG Players.
+- [PUBG Finish Placement Prediction](https://www.kaggle.com/c/pubg-finish-placement-prediction): Predict the battle royale finish of PUBG Players
+- [Open Image 2019](https://www.kaggle.com/c/open-images-2019-object-detection): Detect objects in varied and complex images
+- [Recursion Cellular Image Classification](https://www.kaggle.com/c/recursion-cellular-image-classification): Disentangling biological signal from experimental noise in cellular images
